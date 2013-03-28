@@ -1,4 +1,4 @@
-package euler.scala.exercises
+package euler.scala.exercise1
 
 import org.specs2.mutable.Specification
 

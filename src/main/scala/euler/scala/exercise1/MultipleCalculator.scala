@@ -1,4 +1,4 @@
-package euler.scala.exercises
+package euler.scala.exercise1
 
 
 class MultipleCalculator {
