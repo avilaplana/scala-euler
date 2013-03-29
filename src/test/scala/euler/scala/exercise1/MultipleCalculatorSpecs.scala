@@ -3,7 +3,7 @@ package euler.scala.exercise1
 import org.specs2.mutable.Specification
 
 
-class MultipleCalculatorSpecs  extends Specification{
+class MultipleCalculatorSpecs extends Specification{
 
   val calculator = new MultipleCalculator
   "call calculate " should {
