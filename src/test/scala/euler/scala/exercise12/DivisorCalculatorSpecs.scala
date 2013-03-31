@@ -11,5 +11,9 @@ class DivisorCalculatorSpecs extends Specification {
     "be 1,2,4,7,14,28" in {
       divisorCalculator.listOfDivisors(28) must_== List(1,2,4,7,14,28)
     }
+
+    "be 1,2,4,7,14" in {
+          divisorCalculator.listOfDivisorsWithOutTerm(28) must_== List(1,2,4,7,14)
+        }
   }
 }
