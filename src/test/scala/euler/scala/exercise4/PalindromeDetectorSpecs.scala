@@ -14,6 +14,15 @@ class PalindromeDetectorSpecs extends Specification {
     "returns false for 9008" in {
       detector.detect("9008") must beFalse
     }
+
+
+    "returns true for 901262109" in {
+      detector.detect("901262109") must beTrue
+    }
+
+    "returns false for 90108" in {
+      detector.detect("90108") must beFalse
+    }
   }
 
 }
