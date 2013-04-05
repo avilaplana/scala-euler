@@ -1,6 +1,7 @@
 package euler.scala.exercise16
 
 
+//todo refactor with exercise 6
 class SquareCalculator {
 
 
