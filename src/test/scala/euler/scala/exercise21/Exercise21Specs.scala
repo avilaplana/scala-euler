@@ -12,7 +12,7 @@ class Exercise21Specs extends Specification {
   "sum of all the amicable numbers under 10000" should {
     "be 31626" in {
 
-      val setOfAmicables : mutable.Set[Int] = new mutable.LinkedHashSet()
+      val setOfAmicables : mutable.Set[Long] = new mutable.LinkedHashSet()
       for (term <- 1 until 10000 if (!setOfAmicables.contains(term))) {
         amicableFinder.findAmicable(term) match {
           case Some(amicable) if (amicable != term) => setOfAmicables.add(term); setOfAmicables.add(amicable)

@@ -5,9 +5,9 @@ import euler.scala.exercise12.DivisorCalculator
 
 class AmicableFinder {
 
-  def findAmicable(sourceTerm: Int) : Option[Int] = {
+  def findAmicable(sourceTerm: Int) : Option[Long] = {
     val sumOfDividends = new DivisorCalculator().listOfDivisorsWithOutTerm(sourceTerm).sum
-    if (new DivisorCalculator().listOfDivisorsWithOutTerm(sumOfDividends).sum == sourceTerm) Some(sumOfDividends)
+    if (new DivisorCalculator().listOfDivisorsWithOutTerm(sumOfDividends.toLong).sum == sourceTerm) Some(sumOfDividends)
     else None
   }
 
