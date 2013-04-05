@@ -14,4 +14,15 @@ class TriangleNumberCalculatorSpecs extends Specification {
     }
   }
 
+
+  "isTriangle" should {
+    "return true when the number is 55" in {
+      triangleNumberCalculator.isTriangle(55) must beTrue
+    }
+
+    "false when the number is 56" in {
+      triangleNumberCalculator.isTriangle(56) must beFalse
+    }
+  }
+
 }
