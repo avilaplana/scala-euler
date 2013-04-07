@@ -3,7 +3,7 @@ package euler.scala.exercise12
 class TriangleNumberCalculator {
 
   def calculate(term: Int): Int = {
-    (1 to term).sum
+    term * (term + 1)/2
   }
 
   def isTriangle(number: Int): Boolean = {
