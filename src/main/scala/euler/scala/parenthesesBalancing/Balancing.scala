@@ -13,9 +13,16 @@ package euler.scala.parenthesesBalancing
 
 object Balancing {
 
-  def balance(chars: List[Char]): Boolean = {
-    val charsFiltered = chars.filter(char => char != '(' || char != ')')
-    
-    return true
+  def balance(chars: List[Char], matching: Int = 0): Boolean = {
+
+    chars.isEmpty match {
+      case true => true
+      case false => chars.head match {
+        case '('=> balance(chars.tail, matching + 1)
+        case ')' if (matching - 1 < 0) => false
+        case ')'  => balance(chars.tail, matching - 1)
+        case _ => balance(chars.tail, matching)
+      }
+    }
   }
 }
