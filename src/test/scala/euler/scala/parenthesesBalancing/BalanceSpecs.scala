@@ -18,15 +18,22 @@ class BalanceSpecs extends Specification {
   }
 
   "balance in :-)" should {
-    "be true" in {
+    "be false" in {
       Balancing.balance(":-)".toList) must_== (false)
     }
   }
 
   "balance in ())(" should {
-      "be true" in {
+      "be false" in {
         Balancing.balance("())(".toList) must_== (false)
       }
     }
+
+  "balance in ((((" should {
+        "be false" in {
+          Balancing.balance("((((".toList) must_== (false)
+        }
+      }
+
 
 }

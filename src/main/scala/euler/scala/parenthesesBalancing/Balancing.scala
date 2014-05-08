@@ -16,6 +16,7 @@ object Balancing {
   def balance(chars: List[Char], matching: Int = 0): Boolean = {
 
     chars.isEmpty match {
+      case true if (matching) > 0 => false
       case true => true
       case false => chars.head match {
         case '('=> balance(chars.tail, matching + 1)
